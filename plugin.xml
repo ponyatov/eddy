@@ -3,8 +3,8 @@
 <plugin>
 
    <extension
-         id="application"
-         point="org.eclipse.core.runtime.applications">
+   			id="application"
+			point="org.eclipse.core.runtime.applications">
       <application>
          <run
                class="eddy.Application">
@@ -12,15 +12,56 @@
       </application>
    </extension>
 
-   <extension
-         point="org.eclipse.ui.perspectives">
+   <extension 
+   		 	point="org.eclipse.ui.perspectives">
       <perspective
             name="Eddy"
             class="eddy.Perspective"
-            id="eddy.perspective">
-      </perspective>
+            id="eddy.perspective"
+            fixed="true"/>
    </extension>
    
-   <extenstion point="org.eclipse.ui.perspectiveExtension"/>
+   <extension
+   		point="org.eclipse.ui.menus">
+   		<menuContribution
+   				locationURI="menu:org.eclipse.ui.main.menu">
+        </menuContribution>
+   </extension>
+   
+   <extension
+   			point="org.eclipse.ui.views">
+   		<view
+   			id="eddy.nodes"
+   			class="eddy.nodes"
+   			name="Узлы"
+   			icon="icons/nodes.png"
+   		/>
+   </extension>
+   
+   <extension
+   			point="org.eclipse.ui.perspectiveExtensions">
+   		<perspectiveExtension targetID="eddy.perspective">
+   			<hiddenMenuItem id="org.eclipse.ui.run"/>
+   			<hiddenMenuItem id="org.eclipse.search.menu"/>
+   			<hiddenMenuItem id="org.eclipse.source.menu"/>
+   			<hiddenMenuItem id="org.eclipse.refactor.menu"/>
+   			<view
+   				id="org.eclipse.jdt.ui.PackageExplorer"
+   				minimized="false"
+   				ratio="0.3"
+   				relationship="left"
+   				relative="org.eclipse.ui.editorss"
+   				visible="true"
+   			/>
+   			<view
+   				id="eddy.nodes"
+   				minimized="false"
+   				ratio="0.5"
+   				relationship="bottom"
+   				relative="org.eclipse.jdt.ui.PackageExplorer"
+   				visible="true"
+   			/>
+   		</perspectiveExtension>
+   </extension>
 
 </plugin>
