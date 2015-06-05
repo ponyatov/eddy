@@ -85,8 +85,8 @@
    			point="org.eclipse.ui.views">
    		<view
    			id="eddy.nodes"
-   			class="eddy.nodes"
-   			name="Узлы"
+   			class="eddy.Files"
+   			name="Файлы"
    			icon="icons/nodes.png"
    		/>
    </extension>
