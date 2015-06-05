@@ -21,10 +21,30 @@
             fixed="true"/>
    </extension>
    
+	<extension
+			point="org.eclipse.ui.bindings">
+		<key
+			sequence="M3+Q"
+			commandId="org.eclipse.ui.file.exit"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+			contextId="org.eclipse.ui.contexts.window" />
+	</extension>   
+   
    <extension
    		point="org.eclipse.ui.menus">
    		<menuContribution
    				locationURI="menu:org.eclipse.ui.main.menu">
+   				<menu
+   					id="eddy.menu.file"
+   					label="&amp;Fайл"
+   					icon="icons/file.png"
+   				>
+   					<command
+   						commandId="org.eclipse.ui.file.exit"
+   						label="Выход"
+   						icon="icons/quit.png"
+   						/>
+   				</menu>
         </menuContribution>
    </extension>
    
