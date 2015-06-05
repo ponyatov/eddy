@@ -40,10 +40,43 @@
    					icon="icons/file.png"
    				>
    					<command
+   						commandId="org.eclipse.ui.file.save"
+   						label="&amp;Nовый"
+   						/>
+   					<command
+   						commandId="org.eclipse.ui.file.save"
+   						label="&amp;Oткрыть"
+   						/>
+   					<command
+   						commandId="org.eclipse.ui.file.save"
+   						label="&amp;Sохранить"
+   						/>
+   					<command
+   						commandId="org.eclipse.ui.file.save"
+   						label="Сохранить к&amp;aк"
+   						/>
+   					<command
+   						commandId="org.eclipse.ui.file.close"
+   						label="Закрыть"
+   						/>
+   					<command
    						commandId="org.eclipse.ui.file.exit"
    						label="Выход"
    						icon="icons/quit.png"
    						/>
+   				</menu>
+   				<menu
+   					id="eddy.menu.edit"
+   					label="Р&amp;eдактор"
+   				>
+   					<command
+   						commandId="org.eclipse.ui.edit.undo"
+   						label="Откот"
+   					/>
+   					<command
+   						commandId="org.eclipse.ui.edit.redo"
+   						label="Наезд"
+   					/>
    				</menu>
         </menuContribution>
    </extension>
